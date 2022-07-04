@@ -1,0 +1,36 @@
+<!-- --------------ngSwitch------------- -->
+<div *ngFor="let user of users">
+  <div [ngSwitch]="user.verified">
+    <ul *ngSwitchCase="true">
+      <li [ngStyle]="{ color: 'green' }">
+        Name: {{ user.Name }} &nbsp;<br />
+        Email: {{ user.Email }} &nbsp; <br />
+        Gender: {{ user.gender }}<br />
+        status: verified
+      </li>
+    </ul>
+    <ul *ngSwitchCase="false">
+      <li [ngStyle]="{ color: 'red' }">
+        Name: {{ user.Name }} &nbsp;<br />
+        Email: {{ user.Email }} &nbsp; <br />
+        Gender: {{ user.gender }}<br />
+        status: not verified
+      </li>
+    </ul>
+  </div>
+  <!-- ---------Attribute Directive----------- -->
+
+  <!-- <ul
+    [ngClass]="{
+      verifieduser: user.verified == true,
+      notverified: user.verified == false
+    }"
+  >
+    <li>
+      Name: {{ user.Name }} &nbsp;<br />
+      Email: {{ user.Email }} &nbsp; <br />
+      Gender: {{ user.gender }}<br />
+      status: not verified
+    </li>
+  </ul> -->
+</div>
