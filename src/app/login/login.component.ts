@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
    if(x.Name === this.name && x.Password === this.password){
     alert("Welcome"+" "+x.Name)
    }
-  
+   
   }
  
  }
