@@ -7,6 +7,9 @@ import { ProductComponent } from './product/product.component';
 import { PractiseComponent } from './practise/practise.component';
 import { FormsModule } from '@angular/forms';
 import { UserlistComponent } from './userlist/userlist.component';
+import { ProductService } from './product.service';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { UserlistComponent } from './userlist/userlist.component';
     LoginComponent,
     ProductComponent,
     PractiseComponent,
-    UserlistComponent
+    UserlistComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
