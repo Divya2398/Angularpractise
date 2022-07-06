@@ -1,5 +1,60 @@
-<!-- <app-login></app-login> -->
-<!-- <app-practise></app-practise> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anugular practise</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <!-- instead of href use Router-link to avoid reload or refresh -->
+              <!-- routerlinkActive is used to highlight the active link -->
+              <a
+                class="nav-link"
+                routerLink="/"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/userlist"
+                routerLinkActive="active"
+                >Userlist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/productlist"
+                routerLinkActive="active"
+                >Productlist</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+<!-- router outlet is used to render our html page of defined path in browser -->
+<router-outlet></router-outlet>
 
 <!-- ----ngif and ngfor---- -->
 <!-- <div class="container">
@@ -19,7 +74,7 @@
 </div> -->
 
 <!-- -----------------service and provider----------------- -->
-<div class="col-md-12">
+<!-- <div class="col-md-12">
   <div class="row">
     <div class="col-md-4 offset-md-1 mb-4 mt-5">
       <div class="card" style="width: 25rem">
@@ -38,4 +93,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

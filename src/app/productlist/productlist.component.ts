@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -9,7 +10,12 @@ import { ProductService } from '../product.service';
 })
 export class ProductlistComponent implements OnInit {
 
-  constructor(public list: ProductService) { }
+
+  constructor(public router: Router, public list: ProductService) { }
+
+  navproduct() {
+    this.router.navigate(['/product'])
+  }
 
   increase() {
     this.list.addquantity()
