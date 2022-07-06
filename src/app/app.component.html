@@ -9,7 +9,13 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="">Logo</a>
+        <a
+          class="navbar-brand"
+          href=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -25,7 +31,7 @@
               <!-- routerlinkActive is used to highlight the active link -->
               <a
                 class="nav-link"
-                routerLink="/"
+                routerLink="/login"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 >Login</a
@@ -53,8 +59,25 @@
     </nav>
   </body>
 </html>
+
 <!-- router outlet is used to render our html page of defined path in browser -->
 <router-outlet></router-outlet>
+
+<div class="col-md-12">
+  <div class="col-md-4 offset-md-4 mb-3 mt-2">
+    <div class="card border-3 border-info">
+      <div class="card-body">
+        <div class="text-center">
+          <h3>Parent</h3>
+          <h4>Random Unique number generator</h4>
+          <h4>{{ randomnumber }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="text-center">Data passing from parent to child</h3>
+<app-practise [child]="parent" (data)="getdata($event)"></app-practise>
 
 <!-- ----ngif and ngfor---- -->
 <!-- <div class="container">

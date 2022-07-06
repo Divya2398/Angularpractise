@@ -5,12 +5,14 @@ import { LoginComponent } from './login/login.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductComponent } from './product/product.component';
+import { PractiseComponent } from './practise/practise.component';
 
 const routes: Routes = [
-  { path: "", component: LoginComponent },
+  { path: "login", component: LoginComponent },
   { path: "userlist", component: UserlistComponent },
   { path: "productlist", component: ProductlistComponent },
-  { path: "product", component: ProductComponent }
+  { path: "product", component: ProductComponent },
+  { path: "practise", component: PractiseComponent }
 ]
 
 @NgModule({

@@ -22,4 +22,9 @@ export class AppComponent {
       rollno: 10655
     }
   ]
+  randomnumber: any;
+  getdata(value: any) {
+    this.randomnumber = value
+  }
+
 }
