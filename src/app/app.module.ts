@@ -10,6 +10,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { ProductService } from './product.service';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     ProductComponent,
     PractiseComponent,
     UserlistComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
